@@ -33,11 +33,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void createRows(Boolean newList, TableLayout tableLayout) {
+        ZanyEditTextFactory zanyEditTextFactory = new ZanyEditTextFactory();
         TableLayout task = findViewById(R.id.subtask);
         TableRow tableRow = new TableRow(MainActivity.this), row = new TableRow(MainActivity.this);
         CheckBox bigCheck = new CheckBox(MainActivity.this), checkBox = new CheckBox(MainActivity.this);
-        BigZanyEditText edt = new BigZanyEditText(MainActivity.this);
-        ZanyEditText qty = new ZanyEditText(MainActivity.this);
+        BigZanyEditText edt = (BigZanyEditText) zanyEditTextFactory.getZanyEditText(ZanyEditTextFactory.ZanyEditTextType.BIG_ZANY_EDIT_TEXT, MainActivity.this);
+        ZanyEditText qty = (ZanyEditText) zanyEditTextFactory.getZanyEditText(ZanyEditTextFactory.ZanyEditTextType.ZANY_EDIT_TEXT, MainActivity.this);
         TableRow.LayoutParams lp = new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT, TableRow.LayoutParams.WRAP_CONTENT);
         ColorStateList oldColors = qty.getTextColors();
 

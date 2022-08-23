@@ -26,10 +26,10 @@ public class BigZanyEditText extends androidx.appcompat.widget.AppCompatEditText
 
     @Override
     public InputConnection onCreateInputConnection(EditorInfo outAttrs) {
-        return new BigZanyInputConnection(super.onCreateInputConnection(outAttrs),true);
+        return new BigZanyInputConnection(super.onCreateInputConnection(outAttrs), true);
     }
 
-    private class BigZanyInputConnection extends InputConnectionWrapper{
+    private class BigZanyInputConnection extends InputConnectionWrapper {
         public BigZanyInputConnection(InputConnection target, boolean mutable) {
             super(target, mutable);
         }

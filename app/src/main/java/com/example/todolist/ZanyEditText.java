@@ -15,7 +15,7 @@ import java.util.Random;
 
 public class ZanyEditText extends androidx.appcompat.widget.AppCompatEditText {
 
-    private Random r = new Random();
+    private final Random r = new Random();
 
     public ZanyEditText(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
@@ -27,11 +27,6 @@ public class ZanyEditText extends androidx.appcompat.widget.AppCompatEditText {
 
     public ZanyEditText(Context context) {
         super(context);
-    }
-
-    public void setRandomBackgroundColor() {
-        setBackgroundColor(Color.rgb(r.nextInt(256), r.nextInt(256), r
-                .nextInt(256)));
     }
 
     @Override
